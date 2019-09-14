@@ -1,0 +1,3 @@
+pysolr
+matplotlib
+numpy
