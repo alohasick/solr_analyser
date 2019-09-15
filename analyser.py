@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pysolr
-import json
 import csv
 
 
@@ -99,7 +98,7 @@ def main():
     print('\n-----Q2-----\n')
     acu_b4q2, cov_b4q2 = analyse_query(b4, query2, relevancia_query2)
 
-    #plot analysis for query1
+    # plot analysis for query1
     graph1 = plt.figure()
     ax = graph1.add_axes([0.1, 0.1, 0.8, 0.8])
     ax.set_xlabel('Coverage')
@@ -110,7 +109,7 @@ def main():
     ax.plot(cov_b4q1, acu_b4q1, 'green', marker='o', label='Base 4')
     ax.legend()
 
-    #plot analysis for query2
+    # plot analysis for query2
     graph2 = plt.figure()
     bx = graph2.add_axes([0.1, 0.1, 0.8, 0.8])
     bx.set_xlabel('Coverage')
