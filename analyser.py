@@ -23,8 +23,8 @@ def read_csv(csv_file):
     return csv_as_list
 
 
-def write_results(results, query):
-    with open('{}.txt'.format(query), 'a') as file:
+def write_results(results, query, core):
+    with open('{}_{}.txt'.format(query, core), 'a') as file:
         file.truncate(0)
         for result in results:
             file.write('KEY: ' + result['key'] + '\n')
@@ -49,7 +49,7 @@ def analyse_query(core, query, matriz_relevancia):
     coverage = list()
     r1 = read_csv(matriz_relevancia)
     results = search(core, query)
-    write_results(results, query)
+    write_results(results, query, core)
     print('QUANTIDADE DE RESULTADOS RETORNADOS DA QUERY: {} \n'.format(len(results)))
     for r in results:
         countT += 1
